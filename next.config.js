@@ -1,14 +1,16 @@
 /** @type {import('next').NextConfig} */
+const isGitHubPages = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   output: 'export',
   images: {
-    unoptimized: true, // Required for GitHub Pages
-    domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com'], // Keep your remote domain
+    unoptimized: true,
+    domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com'], // Remote image domain
   },
-  basePath: '/AcePlantersNextjs', // Replace with your repo name
-  assetPrefix: '/AcePlantersNextjs', // Replace with your repo name
+  basePath: isGitHubPages ? 'vivacazador.github.io/AcePlantersNextjs' : '', // Use the repo name only on GitHub Pages
+  assetPrefix: isGitHubPages ? 'vivacazador.github.io/AcePlantersNextjs' : '', // Use the repo name only on GitHub Pages
 };
 
 module.exports = nextConfig;
