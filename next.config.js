@@ -9,8 +9,8 @@ const nextConfig = {
     unoptimized: true,
     domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com'], // Remote image domain
   },
-  basePath: isGitHubPages ? 'vivacazador.github.io/AcePlantersNextjs' : '', // Use the repo name only on GitHub Pages
-  assetPrefix: isGitHubPages ? 'vivacazador.github.io/AcePlantersNextjs' : '', // Use the repo name only on GitHub Pages
+  basePath: isGitHubPages ? '/AcePlantersNextjs' : '', // Use the repo name only on GitHub Pages
+  assetPrefix: isGitHubPages ? '/AcePlantersNextjs' : '', // Use the repo name only on GitHub Pages
 };
 
 module.exports = nextConfig;
